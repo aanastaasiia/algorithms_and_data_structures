@@ -1,0 +1,68 @@
+# Project
+local.py
+sh_night_db.sql.gz
+sh_night_db.bak
+media/*
+cache/*
+logs/*
+zip_reports/*
+private_files/*
+docs/site
+production_static/
+Сервисная компания_265/
+*.log
+*.cache
+*.db
+*.rdb
+*.lock
+!delete.me
+venv
+env
+.env
+env/*
+/env
+/env/*
+src/*
+.env
+docker-compose.yml
+
+#Certificates
+*.crt
+*.key
+
+# Scripts
+/scripts/*.sh
+/db_scripts/*.sh
+/db_scripts/dump_error.txt
+/db_scripts/*.sh
+/scripts/*.bak
+
+
+# Django
+*.pot
+*.pyc
+*.pyo
+*.xls
+/test_user_*
+
+
+# OSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+nbproject/
+.vagrant
+.project
+.pydevproject
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
