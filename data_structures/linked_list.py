@@ -1,38 +1,39 @@
-from typing import Any
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
 
-class ListNode:
-    def __init__(self, val=None, next=None):
-        self.val = val
-        self.next = next
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
 
-    def __repr__(self):
-        return f"ListNode со значением {self.val}"
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
 
+    def prepend(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
 
-def add_to_end(head: ListNode, val: Any) -> None:
-    ptr = head
-    while ptr.next:
-        ptr = ptr.next
-    ptr.next = ListNode(val)
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
 
-
-def add_to_front(head: ListNode, val: Any) -> ListNode:
-    node = ListNode(val)
-    node.next = head
-    return node
-
-
-# Создает и расширяет список
-head = ListNode(5)
-add_to_end(head, 'abc')
-add_to_end(head, 4.815162342)
-
-# Вывод
-print(head)  # ListNode со значением 5
-print(head.next)  # ListNode со значением abc
-print(head.next.next)  # ListNode со значением 4.815162342
-
-# Пытаемся обновить head
-add_to_front(head, 0)
-print(head)  # ListNode со значением 5
+linked_list = SinglyLinkedList()
+linked_list.append("1st node - head")
+linked_list.append("2nd node")
+linked_list.append("3rd node - last")
+linked_list.display()
+linked_list.prepend("New head")
+linked_list.display()
