@@ -30,6 +30,7 @@ class SinglyLinkedList:
             current = current.next
         print("None")
 
+
 linked_list = SinglyLinkedList()
 linked_list.append("1st node - head")
 linked_list.append("2nd node")
