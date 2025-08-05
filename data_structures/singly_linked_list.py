@@ -20,6 +20,9 @@ class SinglyLinkedList:
 
     def prepend(self, data):
         new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
         new_node.next = self.head
         self.head = new_node
 
