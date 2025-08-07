@@ -7,7 +7,10 @@ def bubble_sort(list_to_sort: List[int]) -> List[int]:
         swapped = False
         for j in range(length - i - 1):
             if list_to_sort[j] > list_to_sort[j + 1]:
-                list_to_sort[j], list_to_sort[j + 1] = list_to_sort[j + 1], list_to_sort[j]
+                list_to_sort[j], list_to_sort[j + 1] = (
+                    list_to_sort[j + 1],
+                    list_to_sort[j],
+                )
                 swapped = True
         if not swapped:
             break
