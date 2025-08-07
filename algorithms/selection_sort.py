@@ -3,6 +3,7 @@ from typing import List
 unordered_list = [6, 1, 7, 2, 8, 4, 87, 0, 9]
 
 
+# TODO: добавить рекусивную версию
 def selection_sort(list_to_sort: List[int]):
     length = len(list_to_sort)
 

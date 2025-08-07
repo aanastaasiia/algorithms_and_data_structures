@@ -1,6 +1,7 @@
 from typing import List
 
 
+# TODO: добавить рекусивную версию
 def bubble_sort(list_to_sort: List[int]) -> List[int]:
     length = len(list_to_sort)
     for i in range(length):
