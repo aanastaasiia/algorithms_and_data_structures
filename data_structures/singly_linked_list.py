@@ -4,6 +4,7 @@ class Node:
         self.next = None
 
 
+# TODO: реализовать удаление
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
