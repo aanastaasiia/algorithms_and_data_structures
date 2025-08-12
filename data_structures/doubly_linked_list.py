@@ -5,7 +5,6 @@ class DoublyNode:
         self.prev = None
 
 
-# TODO: реализовать удаление
 class DoublyLinkedList:
     def __init__(self):
         self.head = None

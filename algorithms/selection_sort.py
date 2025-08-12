@@ -1,6 +1,6 @@
 from typing import List
 
-unordered_list = [6, 1, 7, 2, 8, 4, 87, 0, 9]
+unsorted_list = [6, 1, 7, 2, 8, 4, 87, 0, 9]
 
 
 def selection_sort(list_to_sort: List[int]):
@@ -26,5 +26,5 @@ def recursive_selection_sort(list_to_sort, i=0):
     return recursive_selection_sort(list_to_sort, i + 1)
 
 
-print(selection_sort(unordered_list))
-print(recursive_selection_sort(unordered_list))
+print(selection_sort(unsorted_list))
+print(recursive_selection_sort(unsorted_list))

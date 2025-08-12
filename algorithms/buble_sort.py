@@ -26,6 +26,6 @@ def recursive_bubble_sort(list_to_sort, i=0):
     return recursive_bubble_sort(list_to_sort, i + 1)
 
 
-arr = [5, 1, 6, 8, 9, 22]
-print(bubble_sort(arr))
-print(recursive_bubble_sort(arr))
+unsorted_list = [5, 1, 6, 8, 9, 22]
+print(bubble_sort(unsorted_list))
+print(recursive_bubble_sort(unsorted_list))

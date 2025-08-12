@@ -26,12 +26,12 @@ def recursive_binary_search(number, list_of_numbers, low=0, high=None):
     return None
 
 
-arr = [-7, -2, -1, 0, 1, 2, 3, 5]
+unsorted_list = [-7, -2, -1, 0, 1, 2, 3, 5]
 print(
-    f"Бинарный поиск. Индекс элемента со значением 3 в списке {arr}: ",
-    binary_search(3, arr),
+    f"Бинарный поиск. Индекс элемента со значением 3 в списке {unsorted_list}: ",
+    binary_search(3, unsorted_list),
 )
 print(
-    f"Рекурсивная реализация бинарного поиска. Индекс элемента со значением 3 в списке {arr}: ",
-    recursive_binary_search(3, arr),
+    f"Рекурсивная реализация бинарного поиска. Индекс элемента со значением 3 в списке {unsorted_list}: ",
+    recursive_binary_search(3, unsorted_list),
 )
