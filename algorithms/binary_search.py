@@ -1,4 +1,7 @@
-def binary_search(number, list_of_numbers):
+from typing import List
+
+
+def binary_search(number: int, list_of_numbers: List[int]) -> int | None:
     low = 0
     high = len(list_of_numbers) - 1
     while low <= high:
@@ -12,7 +15,8 @@ def binary_search(number, list_of_numbers):
     return None
 
 
-def recursive_binary_search(number, list_of_numbers, low=0, high=None):
+def recursive_binary_search(number: int, list_of_numbers: List[int], low: int = 0,
+                            high: int | None = None) -> None | int:
     if high is None:
         high = len(list_of_numbers) - 1
     if low <= high:
@@ -20,9 +24,13 @@ def recursive_binary_search(number, list_of_numbers, low=0, high=None):
         if list_of_numbers[middle] == number:
             return middle
         elif number < list_of_numbers[middle]:
-            return recursive_binary_search(number, list_of_numbers, low, middle - 1)
+            return recursive_binary_search(
+                number, list_of_numbers, low, middle - 1
+            )
         else:
-            return recursive_binary_search(number, list_of_numbers, middle + 1, high)
+            return recursive_binary_search(
+                number, list_of_numbers, middle + 1, high
+            )
     return None
 
 

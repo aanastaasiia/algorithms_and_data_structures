@@ -17,12 +17,15 @@ def bubble_sort(list_to_sort: List[int]) -> List[int]:
     return list_to_sort
 
 
-def recursive_bubble_sort(list_to_sort, i=0):
+def recursive_bubble_sort(list_to_sort: List[int], i: int=0) -> List[int]:
     if i >= len(list_to_sort) - 1:
         return list_to_sort
     for j in range(len(list_to_sort) - i - 1):
         if list_to_sort[j] > list_to_sort[j + 1]:
-            list_to_sort[j], list_to_sort[j + 1] = list_to_sort[j + 1], list_to_sort[j]
+            list_to_sort[j], list_to_sort[j + 1] = (
+                list_to_sort[j + 1],
+                list_to_sort[j],
+            )
     return recursive_bubble_sort(list_to_sort, i + 1)
 
 

@@ -1,14 +1,17 @@
+from typing import Any, Optional
+
+
 class Node:
-    def __init__(self, data):
+    def __init__(self, data: Any) -> None:
         self.data = data
-        self.next = None
+        self.next: Optional['Node'] = None
 
 
 class SinglyLinkedList:
-    def __init__(self):
-        self.head = None
+    def __init__(self) -> None:
+        self.head: Optional[Node] = None
 
-    def append(self, data):
+    def append(self, data: Any) -> None:
         new_node = Node(data)
         if not self.head:
             self.head = new_node
@@ -18,7 +21,7 @@ class SinglyLinkedList:
             last = last.next
         last.next = new_node
 
-    def prepend(self, data):
+    def prepend(self, data: Any) -> None:
         new_node = Node(data)
         if not self.head:
             self.head = new_node
@@ -26,14 +29,14 @@ class SinglyLinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def display(self):
+    def display(self) -> None:
         current = self.head
         while current:
             print(current.data, end=" -> ")
             current = current.next
         print("None")
 
-    def remove(self, ind):
+    def remove(self, ind: int) -> None:
         if not self.head:
             raise IndexError("Cannot remove from empty list")
 
